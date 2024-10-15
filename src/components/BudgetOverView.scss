@@ -1,0 +1,67 @@
+.budget-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 500px;
+    margin: 0 auto;
+  
+    .title {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+      animation: slideUp 1s ease-in-out;
+    }
+  
+    .income, .expenses {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #333;
+      animation: slideUp 0.8s ease-in-out;
+    }
+  
+    .remaining {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-top: 20px;
+      animation: slideUp 0.8s ease-in-out;
+      
+      &.positive {
+        color: green;
+      }
+  
+      &.negative {
+        color: red;
+      }
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @media (max-width: 600px) {
+    .budget-overview {
+      padding: 15px;
+      .title {
+        font-size: 1.5rem;
+      }
+      .income, .expenses {
+        font-size: 1rem;
+      }
+      .remaining {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
